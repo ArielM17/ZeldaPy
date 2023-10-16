@@ -10,16 +10,17 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         self.clock = pygame.time.Clock()
 
-        def run(sefl):
-            while True:
-                for event in pygame.event.get():
-                    if event.type == pygame.QUIT:
-                        pygame.quit()
-                        sys.exit()
+    def run(self):
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
 
-                self.screen.fill('black')
-                pygame.display.update()
-                self.clock.tick(FPS)
+            self.screen.fill('black')
+            debug('Hello World')
+            pygame.display.update()
+            self.clock.tick(FPS)
 
 if __name__ == '__main__':
     game = Game()
